@@ -2,12 +2,43 @@
 <html>
   <head>
     <title>Andrew's Website</title>
+    <link rel="stylesheet" href="style.css"/>
   </head>
 
   <body>
     <!-- All content goes here -->
     <div id="all-contents">
-      
+      <nav>
+        <h1>Andrew's Website</h1>
+        <ul id="nav-ul">
+          <li class="nav-li">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="nav-li">
+            <a href="portfolio.html">Portfolio</a>
+          </li>
+        </ul>
+      </nav>
+
+      <main>
+        <div class="sidebar">
+          <img class="sidebar-img" src="data:image/jpeg;base64,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">
+        </div>
+
+        <div class="content">
+          <h2>Andrew Ong</h2>
+          <p>Student at Haynes Academy</p>
+          <div id="interests">
+            <h3>Interests</h3>
+            <ul>
+              <li>Gaming</li>
+              <li>Watching shows</li>
+              <li>Procrastinating</li>
+            </ul>
+          </div>
+        </div>
+
+      </main>
     </div>
   </body>
 </html>
