@@ -1,3 +1,4 @@
+/* Main website styles */
 body {
     background: rgb(0, 0, 0);
     color: rgb(45,45,45);
@@ -72,4 +73,25 @@ main{
 
 h2, h3{
     margin: 0px;
+}
+
+/* Portfolio styles */
+.content h1{
+    color: black;
+}
+
+#portfolio li{
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#portfolio li:hover{
+    background: #eee;
+}
+
+#portfolio a{
+    text-decoration: none;
+    color: #454545
 }
