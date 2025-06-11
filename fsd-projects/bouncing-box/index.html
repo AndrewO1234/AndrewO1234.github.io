@@ -72,8 +72,18 @@
 			//////////////////////////////////////////////////////////////////
 
 			// TODO 2 - Variable declarations 
-			var randNum = parseInt(Math.random() * boardWidth) - 70;
-			var randNumY = parseInt(Math.random() * boardHeight) - 70;
+
+			var rng1 = Math.random();
+			while (rng1 > .9) {
+				rng1 = Math.random();
+			}
+			var rng2 = Math.random();
+			while (rng2 > .9) {
+				rng2 = Math.random();
+			}
+
+			var randNum = parseInt(rng1 * boardWidth);
+			var randNumY = parseInt(rng2 * boardHeight);
 			var points = 0; 
 			var positionX = 0;
 			var speed = 10;
@@ -113,13 +123,21 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				randNum = parseInt(Math.random() * boardWidth) - 70;
-				randNumY = parseInt(Math.random() * boardHeight) - 70;
+				rng1 = Math.random();
+				while (rng1 > .9) {
+					rng1 = Math.random();
+				}
+				rng2 = Math.random();
+				while (rng2 > .9) {
+					rng2 = Math.random();
+				}
+				randNum = parseInt(rng1 * boardWidth);
+				randNumY = parseInt(rng2 * boardHeight);
 				positionX = randNum;
 				positionY = randNumY;
 				points += 1;
-				speed = 3 * points + 10;
-				speedY = 3 * points + 10;
+				// speed = 3 * points + 10;
+				// speedY = 3 * points + 10;
 				changeBoxText(points);
 				colorStr = "rgb(" + parseInt(Math.random() * 256) + ", " + parseInt(Math.random() * 256) + ", " + parseInt(Math.random() * 256) + ")";
 				box.css("background-color", colorStr);
